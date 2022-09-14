@@ -2,14 +2,25 @@ import express from "express";
 
 const app = express();
 
-app.get("/ads", (request, rsponse) => {
-  return rsponse.json([
-    { id: 1, name: "anuncio 1" },
-    { id: 2, name: "anuncio 2" },
-    { id: 3, name: "anuncio 3" },
-    { id: 4, name: "anuncio 4" },
-  ]);
+
+
+app.get('/games', (req, res)=> {
+  return res.json([])
+})
+
+app.post('/ads', (req, res)=> {
+  return res.json([])
+})
+
+app.get("/games/:id/ads", (request, rsponse) => {
+  return rsponse.json([]);
 });
+
+
+app.get('/ads/:id/discord', (request, response) => {
+  return response.json()
+})
+
 
 app.listen(3333, () => {
   console.log("listening on port 3333");
