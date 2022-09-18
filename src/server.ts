@@ -54,6 +54,7 @@ app.get("/games/:id/ads", async (request, response) => {
       hourEnd:true,
       weekDays:true,
       yearsPlaying:true,
+      useVoiceChannel:true,
     },
     where:{
       gameId
